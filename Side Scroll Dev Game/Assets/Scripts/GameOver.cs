@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class GameOver : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("Player entered");
+            GameManager.instance.PauseDisplay.SetActive(true);
+            Time.timeScale = 0f;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
