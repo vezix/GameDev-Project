@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance = null;
     public GameObject PauseDisplay;
+    public GameObject Platforms;
 
     // Start is called before the first frame update
     void Awake()
